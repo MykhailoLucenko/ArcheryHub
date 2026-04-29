@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcheryHub.Core", "ArcheryHub.Core\ArcheryHub.Core.csproj", "{2DA633D0-CD0B-4805-BC13-2E780A2C2089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcheryHub.Application", "ArcheryHub.Application\ArcheryHub.Application.csproj", "{BFA24ABA-7613-4D6A-A202-CC7D092CA56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcheryHub.Infrastructure", "ArcheryHub.Infrastructure\ArcheryHub.Infrastructure.csproj", "{4C4FCD08-A447-4D3F-900B-9F9C00802963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcheryHub.Api", "ArcheryHub.Api\ArcheryHub.Api.csproj", "{45125F92-D92E-4DED-9EEA-2A4C3D7B6CA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DA633D0-CD0B-4805-BC13-2E780A2C2089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA633D0-CD0B-4805-BC13-2E780A2C2089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA633D0-CD0B-4805-BC13-2E780A2C2089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA633D0-CD0B-4805-BC13-2E780A2C2089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA24ABA-7613-4D6A-A202-CC7D092CA56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA24ABA-7613-4D6A-A202-CC7D092CA56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA24ABA-7613-4D6A-A202-CC7D092CA56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA24ABA-7613-4D6A-A202-CC7D092CA56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4FCD08-A447-4D3F-900B-9F9C00802963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4FCD08-A447-4D3F-900B-9F9C00802963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4FCD08-A447-4D3F-900B-9F9C00802963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4FCD08-A447-4D3F-900B-9F9C00802963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45125F92-D92E-4DED-9EEA-2A4C3D7B6CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45125F92-D92E-4DED-9EEA-2A4C3D7B6CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45125F92-D92E-4DED-9EEA-2A4C3D7B6CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45125F92-D92E-4DED-9EEA-2A4C3D7B6CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
