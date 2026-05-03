@@ -7,5 +7,5 @@ public interface IUserRepository
     Task<int> RegisterUserAsync (User user);
     Task<User?> LoginAsync (string request);
     Task<UserPerformanceProfile> GetUserPerformanceAsync (int userId);
-    Task<UserYearlyStats> GetUserYearlyStatsAsync (int userId);
+    Task<UserYearlyStats?> GetUserYearlyStatsAsync (int userId, int year);
 }

@@ -7,13 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Database\" />
-      <Folder Include="Repositories\" />
+      <ProjectReference Include="..\ArcheryHub.Application\ArcheryHub.Application.csproj" />
+      <ProjectReference Include="..\ArcheryHub.Core\ArcheryHub.Core.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ArcheryHub.Application\ArcheryHub.Application.csproj" />
-      <ProjectReference Include="..\ArcheryHub.Core\ArcheryHub.Core.csproj" />
+      <PackageReference Include="Dapper" Version="2.1.72" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="11.0.0-preview.3.26207.106" />
+      <PackageReference Include="MySqlConnector" Version="2.5.0" />
     </ItemGroup>
 
 </Project>
