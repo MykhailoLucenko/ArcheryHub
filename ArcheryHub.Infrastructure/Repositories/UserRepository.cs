@@ -38,7 +38,7 @@ public class UserRepository : IUserRepository
 
     }
 
-    public async Task<UserPerformanceProfile> GetUserPerformanceAsync(int userId)
+    public async Task<UserPerformanceProfile?> GetUserPerformanceAsync(int userId)
     {
         var query = "SELECT * FROM vw_UserPerfomance WHERE user_id = @UserId;";
 
@@ -61,4 +61,16 @@ public class UserRepository : IUserRepository
         return response;
 
     }
+    
+    public async Task<bool> CheckUserExistsAsync(int userId)
+    {
+        var query = "SELECT COUNT(1) FROM users WHERE user_id = @UserId;";
+        
+        using var connection = _context.CreateConnection();
+    
+        var response = await connection.ExecuteScalarAsync<int>(query, new { UserId = userId });
+    
+        return response > 0;
+    }
+    
 }

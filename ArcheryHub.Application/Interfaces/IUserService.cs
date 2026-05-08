@@ -1,14 +1,11 @@
 ﻿using ArcheryHub.Core.Entities.Users;
 
-namespace ArcheryHub.Core.Interfaces.Users;
+namespace ArcheryHub.Application.Interfaces;
 
-public interface IUserRepository
+public interface IUserService
 {
     Task<int> RegisterUserAsync (User user);
     Task<User?> LoginAsync (string identifier);
-    Task<UserPerformanceProfile?> GetUserPerformanceAsync(int userId);
+    Task<UserPerformanceProfile?> GetUserPerformanceAsync (int userId);
     Task<UserYearlyStats?> GetUserYearlyStatsAsync (int userId, int year);
-    
-    Task<bool> CheckUserExistsAsync(int userId);
-    
 }
