@@ -9,4 +9,7 @@ public interface IRoundRepository
     Task<IEnumerable<RoundLeaderBoard>> GetRoundLeaderBoardAsync(int roundId);
     Task<IEnumerable<GlobalRecords>> GetGlobalRecordsAsync();
 
+    Task<bool> CheckRoundExistsAsync(int roundId);
+
+
 }

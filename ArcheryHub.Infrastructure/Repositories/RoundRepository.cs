@@ -64,4 +64,16 @@ public class RoundRepository : IRoundRepository
         return response;
 
     }
+
+    public async Task<bool> CheckRoundExistsAsync(int roundId)
+    {
+        var query = "SELECT EXISTS(SELECT 1 FROM rounds WHERE round_id = @RoundId);";
+
+        using var connection = _context.CreateConnection();
+
+        var response = await connection.ExecuteScalarAsync<int>(query, new{RoundId = roundId});
+
+        return response > 0;
+
+    }
 }
