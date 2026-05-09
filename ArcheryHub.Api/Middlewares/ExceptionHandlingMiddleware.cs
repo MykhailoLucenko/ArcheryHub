@@ -28,6 +28,8 @@ public class ExceptionHandlingMiddleware
 
     private static Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
+        Console.WriteLine($"\n[ERROR]: {exception.Message}\n{exception.StackTrace}\n");
+        
         var statusCode = HttpStatusCode.InternalServerError;
         var message = "An unexpected server error occurred.";
 

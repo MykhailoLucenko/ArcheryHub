@@ -1,6 +1,7 @@
 ﻿using ArcheryHub.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using ArcheryHub.Core.Entities.Users;
+using ArcheryHub.Application.DTOs.Users;
 
 namespace ArcheryHub.Api.Controllers;
 
@@ -18,7 +19,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] User user)
+    public async Task<IActionResult> Register([FromBody] CreateUserDto user)
     {
         var userId = await _userService.RegisterUserAsync(user);
 
@@ -48,11 +49,4 @@ public class UserController : ControllerBase
     }
     
     
-    
-    public class LoginRequest
-    {
-        public string Identifier { get; set; } = string.Empty;
-    }
-    
-
 }

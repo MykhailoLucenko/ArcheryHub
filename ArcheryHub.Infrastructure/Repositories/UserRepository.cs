@@ -40,7 +40,7 @@ public class UserRepository : IUserRepository
 
     public async Task<UserPerformanceProfile?> GetUserPerformanceAsync(int userId)
     {
-        var query = "SELECT * FROM vw_UserPerfomance WHERE user_id = @UserId;";
+        var query = "SELECT * FROM vw_UserPerformance WHERE user_id = @UserId;";
 
         using var connection = _context.CreateConnection();
 

@@ -1,4 +1,5 @@
-﻿using ArcheryHub.Application.Interfaces;
+﻿using ArcheryHub.Application.DTOs.Users;
+using ArcheryHub.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using ArcheryHub.Core.Entities.Rounds;
 
@@ -17,7 +18,7 @@ public class RoundController : ControllerBase
     }
 
     [HttpPost("createRound")]
-    public async Task<IActionResult> CreateRound([FromBody] Round request)
+    public async Task<IActionResult> CreateRound([FromBody] CreateRoundDto request)
     {
         var response = await _roundService.CreateRoundAsync(request);
 

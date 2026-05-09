@@ -1,4 +1,5 @@
-﻿using ArcheryHub.Application.Exceptions;
+﻿using ArcheryHub.Application.DTOs.Users;
+using ArcheryHub.Application.Exceptions;
 using ArcheryHub.Application.Interfaces;
 using ArcheryHub.Core.Entities.Users;
 using ArcheryHub.Core.Interfaces.Users;
@@ -15,11 +16,16 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
 
-    public async Task<int> RegisterUserAsync(User user)
+    public async Task<int> RegisterUserAsync(CreateUserDto user)
     {
         try
         {
-            return await _userRepository.RegisterUserAsync(user);
+            User newUser = new User
+            {
+                Nickname = user.Nickname,
+                Email = user.Email
+            };
+            return await _userRepository.RegisterUserAsync(newUser);
         }
         catch (MySqlException ex)
         {
