@@ -26,11 +26,7 @@ public class FriendshipRepository : IFriendshipRepository
 
     public async Task<IEnumerable<FriendActivity>> GetFriendActivity(int userId)
     {
-        var query =
-            @"SELECT nickname AS Nickname, 
-            user_id AS UserId, 
-            `MAX(round_participants.joined_at)` AS LastActive 
-            FROM vw_FriendActivity WHERE user_id = @UserId;";
+        var query = "SELECT * FROM vw_FriendActivity WHERE owner_id = @UserId;";
 
         using var connection = _context.CreateConnection();
 

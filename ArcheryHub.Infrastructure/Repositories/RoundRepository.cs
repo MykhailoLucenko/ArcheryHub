@@ -17,7 +17,7 @@ public class RoundRepository : IRoundRepository
 
     public async Task<int> CreateRoundAsync(Round request)
     {
-        var query = "CALL sp_CreateRound(@CreatedByUserId, @Title, @Distance, @TotalRoundEnds);";
+        var query = "CALL sp_CreateRound(@CreatedByUserId, @Title, @Distance, @TotalRoundEnds, @ArrowsPerEnd);";
 
         using var connection = _context.CreateConnection();
 

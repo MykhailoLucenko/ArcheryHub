@@ -2,8 +2,8 @@
 
 public class RoundLeaderBoard
 {
-    public string UserNickname { get; set; }
+    public string Nickname { get; set; }
     public int ShotEnds { get; set; }
-    public int Score { get; set; }
-    public int XinRound { get; set; }
+    public int TotalScore { get; set; }
+    public int XinRounds { get; set; }
 }

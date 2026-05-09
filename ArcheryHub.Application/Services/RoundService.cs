@@ -1,4 +1,5 @@
-﻿using ArcheryHub.Application.Exceptions;
+﻿using ArcheryHub.Application.DTOs.Users;
+using ArcheryHub.Application.Exceptions;
 using ArcheryHub.Application.Interfaces;
 using ArcheryHub.Core.Entities.Rounds;
 using ArcheryHub.Core.Interfaces.Rounds;
@@ -19,9 +20,17 @@ public class RoundService : IRoundService
     }
 
 
-    public async Task<int> CreateRoundAsync(Round request)
+    public async Task<int> CreateRoundAsync(CreateRoundDto request)
     {
-        return await _roundRepository.CreateRoundAsync(request);
+        Round newRound = new Round
+        {
+            CreatedByUserId = request.CreatedByUserId,
+            Title = request.Title,
+            Distance = request.Distance,
+            TotalRoundEnds = request.TotalRoundEnds,
+            ArrowsPerEnd = request.ArrowsPerEnd
+        };
+        return await _roundRepository.CreateRoundAsync(newRound);
     }
 
 
